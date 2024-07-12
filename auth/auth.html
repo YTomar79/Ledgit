@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - BookCommunity</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">Ledgit</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="#">Communities</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile" id="auth-links">
+            <a href="auth/auth.html">Login </a> | <a href="auth/signup.html"> Sign Up</a>
+        </div>
+        <div class="user-profile" id="dashboard-link" style="display: none;">
+            <a href="dashboard.html">Dashboard</a> | <a href="#" id="logout">Logout</a>
+        </div>
+    </header>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="cta-button">Login</button>
+            </form>
+
+            <div class="google-signin" id="g_id_onload"
+                data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                data-login_uri="YOUR_LOGIN_URI"
+                data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="sign_in_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
+            <div class="alternative">
+                <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/auth.js"></script>
+</body>
+</html>
