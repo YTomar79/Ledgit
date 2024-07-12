@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Community Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Ledgit</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="#">Communities</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile" id="auth-links">
+            <a href="auth/auth.html">Login </a> | <a href="auth/signup.html"> Sign Up</a>
+        </div>
+        <div class="user-profile" id="dashboard-link" style="display: none;">
+            <a href="dashboard.html">Dashboard</a> | <a href="#" id="logout">Logout</a>
+        </div>
+    </header>
+    <main>
+        <!-- Dashboard Section -->
+        <section id="dashboard" style="display: none;">
+            <h2>Welcome to your Dashboard</h2>
+            <p>Here you can manage your account, view your reading statistics, and more.</p>
+        </section>
+        <!-- Existing Home Page Content -->
+        <section id="homepage">
+            <section class="hero">
+                <h1>Rediscover the Joy of Reading</h1>
+                <p>Engaging Reviews, Personalized Recommendations, Vibrant Communities</p>
+                <a href="auth/auth.html" class="cta-button">Join Now</a>
+            </section>
+            <section class="features">
+                <h2>Features</h2>
+                <div class="features-container">
+                    <div class="feature-item">
+                        <h3>Book Recommendations</h3>
+                        <p>Discover your next favorite book with personalized recommendations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Engaging Reviews</h3>
+                        <p>Enjoy sentiment-analysis-driven funny reviews and share your own.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Community Groups</h3>
+                        <p>Connect with readers who share your interests and join niche communities.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Reading Statistics</h3>
+                        <p>Track your reading habits with detailed stats on genres, pages, and authors.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Author Features</h3>
+                        <p>Stay updated with the latest from your favorite authors.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="subscription">
+                <h2>Subscription Plans</h2>
+                <div class="plans-container">
+                    <div class="plan">
+                        <h3>Free Plan</h3>
+                        <p>Enjoy a basic experience alongside a limited selection of rewards*.</p>
+                    </div>
+                    <div class="plan">
+                        <h3>Premium Plan</h3>
+                        <p>Unlock premium features like customizable profiles, reading journals, and exclusive rewards.</p>
+                        <a href="subscriptions.html" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+            </section>
+            <section class="reward-system">
+                <h2>Reward System</h2>
+                <p>Earn points for reading, posting reviews, and participating in the community. Redeem points for custom rewards like gift cards or exclusive content.</p>
+            </section>
+            <section class="reading-journal">
+                <h2>Reading Journal</h2>
+                <p>Log favorite quotes and bookmarks. Track reading progress and wrap-up summaries.</p>
+            </section>
+            <section class="ads-merch">
+                <h2>Ads and Merchandise</h2>
+                <p>Ads: Powered by Google AdSense. Merchandise: Exclusive products for book lovers.</p>
+            </section>
+            <section class="reviews">
+                <h2>User Reviews</h2>
+                <div class="reviews-list">
+                    <h3>Recent Reviews</h3>
+                    <ul id="reviewsContainer">
+                        <!-- Reviews will be dynamically loaded here -->
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ledgit. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Information</a>
+        </div>
+    </footer>
+    <!-- Add this outside the footer -->
+    <div class="auth-toggle">
+        <button onclick="login()">Login</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+</body>
+</html>
