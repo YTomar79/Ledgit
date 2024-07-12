@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">Ledgit</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="#">Communities</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile" id="auth-links">
+            <a href="auth/auth.html">Login </a> | <a href="auth/signup.html"> Sign Up</a>
+        </div>
+        <div class="user-profile" id="dashboard-link" style="display: none;">
+            <a href="dashboard.html">Dashboard</a> | <a href="#" id="logout">Logout</a>
+        </div>
+    </header>
+    <div class="auth-container">
+        <div class="auth-form">
+            <h2>Sign Up</h2>
+           <form id="signupForm">
+               <div class="form-group">
+                   <label for="signupEmail">Email:</label>
+                   <input type="email" id="signupEmail" required>
+               </div>
+               <div class="form-group">
+                   <label for="signupPassword">Password:</label>
+                   <input type="password" id="signupPassword" required>
+               </div>
+               <div class="form-group">
+                   <label for="confirmPassword">Confirm Password:</label>
+                   <input type="password" id="confirmPassword" required>
+               </div>
+               <button type="submit" class="cta-button">Sign Up</button>
+           </form>
+
+            <div id="google-signin-button">
+                Sign up with Google
+            </div>
+            <div class="alternative">
+                <p>Already have an account? <a href="auth.html">Login</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // Add your own response handling here
+        }
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: 'YOUR_CLIENT_ID',
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById('google-signin-button'),
+                { theme: 'outline', size: 'large' }  // customization attributes
+            );
+            google.accounts.id.prompt(); // optional: automatically prompts the One Tap dialog
+        }
+    </script>
+</body>
+</html>
