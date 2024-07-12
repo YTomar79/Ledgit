@@ -504,35 +504,40 @@ footer {
 }
 
 /* Dashboard Section */
-#dashboard {
-    padding: 4rem 2rem;
-    background-color: #e0f7fa;
-    text-align: center;
+.dashboard {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#dashboard h2 {
-    font-size: 2.5rem;
-    color: #00796b;
+main {
+    padding: 20px;
 }
 
-#dashboard p {
-    font-size: 1.2rem;
-    color: #004d40;
+section {
+    margin-bottom: 20px;
 }
 
-.review-item {
+.stats {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.stat-item {
+    background-color: #0073e6;
+    color: #ffffff;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.review-item img.book-icon {
-    width: 50px;
-    height: 50px;
+    flex: 1;
     margin-right: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.review-item:last-child {
-    border-bottom: none;
+.stat-item:last-child {
+    margin-right: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding-bottom: 10px;
 }
