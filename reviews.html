@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarkd - Reviews</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Ledgit</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="#">Communities</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <a href="auth/auth.html">Login</a> | <a href="auth/auth.html">Sign Up</a>
+        </div>
+    </header>
+    <main>
+        <section id="reviews-section">
+            <h2>User Reviews</h2>
+            <div id="reviews-container">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+        </section>
+        <section id="review-form-section">
+            <h2>Submit a Review</h2>
+            <form id="review-form">
+                <input type="number" id="user_id" placeholder="Your User ID" required>
+                <input type="number" id="book_id" placeholder="Book ID" required>
+                <textarea id="review" placeholder="Your Review" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
